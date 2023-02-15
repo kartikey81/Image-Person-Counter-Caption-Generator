@@ -1,4 +1,5 @@
 mxnet==1.5.0
+setuptools
 gluoncv
 hashlib
 numpy
