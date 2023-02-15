@@ -20,4 +20,4 @@ huggingface_hub
 torch
 torchvision
 
-pickle
+
