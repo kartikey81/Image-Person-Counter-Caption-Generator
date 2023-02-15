@@ -1,0 +1,22 @@
+mxnet==1.5.0
+gluoncv
+hashlib
+numpy
+matplotlib
+pylab
+pathlib
+seaborn
+SpeechRecognition
+libasound2-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg
+pyaudio
+pydub
+gTTS
+IPython
+transformers
+streamlit
+open_clip_torch
+huggingface_hub
+torch
+torchvision
+PIL
+pickle
