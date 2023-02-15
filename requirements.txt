@@ -19,5 +19,5 @@ open_clip_torch
 huggingface_hub
 torch
 torchvision
-PIL
+
 pickle
