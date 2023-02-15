@@ -4,7 +4,7 @@ gluoncv
 
 numpy
 matplotlib
-pylab
+
 pathlib
 seaborn
 SpeechRecognition
