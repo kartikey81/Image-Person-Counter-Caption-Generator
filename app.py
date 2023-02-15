@@ -117,7 +117,7 @@ class PersonCounter():
 counter = PersonCounter(threshold=0.2)
 
 if st.button("COUNT The Persons"):
-  a=counter.count('/content/test.jpg', visualize=True)
+  a=counter.count('test.jpg', visualize=True)
   if a == 1:
 
     print('{} person detected in image.'.format(a))
