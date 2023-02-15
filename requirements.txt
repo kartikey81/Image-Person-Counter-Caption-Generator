@@ -7,7 +7,11 @@ pylab
 pathlib
 seaborn
 SpeechRecognition
-libasound2-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg
+libasound2-dev 
+portaudio19-dev 
+libportaudio2 
+libportaudiocpp0 
+ffmpeg
 pyaudio
 pydub
 gTTS
