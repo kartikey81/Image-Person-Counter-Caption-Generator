@@ -2,9 +2,9 @@ from transformers import AutoProcessor, AutoTokenizer, AutoImageProcessor, AutoM
 import torch
 import open_clip
 from  PIL import Image, ImageOps
-
+import streamlit as st
 from huggingface_hub import hf_hub_download
-
+@st.cache
 torch.hub.download_url_to_file('http://images.cocodataset.org/val2017/000000039769.jpg', 'cats.jpg')
 torch.hub.download_url_to_file('https://huggingface.co/datasets/nielsr/textcaps-sample/resolve/main/stop_sign.png', 'stop_sign.png')
 torch.hub.download_url_to_file('https://cdn.openai.com/dall-e-2/demos/text2im/astronaut/horse/photo/0.jpg', 'astronaut.jpg')
