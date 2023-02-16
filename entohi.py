@@ -6,7 +6,9 @@ import seaborn as sns
 import string
 import IPython
 from gtts import gTTS
+import streamlit as st
 from transformers import MBartForConditionalGeneration, MBart50TokenizerFast
+@st.cache
 model = MBartForConditionalGeneration.from_pretrained("facebook/mbart-large-50-one-to-many-mmt")
 tokenizer = MBart50TokenizerFast.from_pretrained("facebook/mbart-large-50-one-to-many-mmt", src_lang="en_XX")
 def convert(article_en):
