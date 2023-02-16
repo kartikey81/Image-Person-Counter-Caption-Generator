@@ -80,6 +80,7 @@ def count_object(network, class_ids, scores, bounding_boxes, object_label, thres
         if proba>threshold and class_ids[i].asscalar()==idx:
             num_people+=1
     return num_people    
+@st.cache
 class PersonCounter():
     def __init__(self, threshold):
         self._network = gcv.model_zoo.get_model('yolo3_darknet53_coco', pretrained=True)
@@ -115,7 +116,7 @@ class PersonCounter():
         fig.set_size_inches(8,8)
         plt.show()
 counter = PersonCounter(threshold=0.2)
-
+@st.cache
 if st.button("COUNT The Persons"):
   a=counter.count('test.jpg', visualize=True)
   if a == 1:
@@ -162,6 +163,7 @@ if st.button("COUNT The Persons"):
     audio_bytes = audio_file.read()
     st.markdown(f"## Your audio in Hindi:")
     st.audio(audio_bytes, format="audio/mp3/wav", start_time=0)
+@st.cache
 if st.button("Caption the Image"):
   s=caption.generate_captions('test.jpg')
   print(s)
