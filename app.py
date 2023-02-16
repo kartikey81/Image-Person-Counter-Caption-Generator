@@ -116,7 +116,7 @@ class PersonCounter():
         fig.set_size_inches(8,8)
         plt.show()
 counter = PersonCounter(threshold=0.2)
-@st.cache
+
 if st.button("COUNT The Persons"):
   a=counter.count('test.jpg', visualize=True)
   if a == 1:
@@ -163,7 +163,7 @@ if st.button("COUNT The Persons"):
     audio_bytes = audio_file.read()
     st.markdown(f"## Your audio in Hindi:")
     st.audio(audio_bytes, format="audio/mp3/wav", start_time=0)
-@st.cache
+
 if st.button("Caption the Image"):
   s=caption.generate_captions('test.jpg')
   print(s)
