@@ -9,7 +9,7 @@ pathlib
 seaborn
 SpeechRecognition
 
-pyaudio
+
 pydub
 gTTS
 IPython
