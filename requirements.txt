@@ -4,12 +4,15 @@ gluoncv
 
 numpy
 matplotlib
-
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
 pathlib
 seaborn
 SpeechRecognition
 
-
+gunicorn
 pydub
 gTTS
 IPython
