@@ -12,7 +12,9 @@ pathlib
 seaborn
 SpeechRecognition
 
-gunicorn web
+gunicorn 
+apache2-utils
+
 pydub
 gTTS
 IPython
