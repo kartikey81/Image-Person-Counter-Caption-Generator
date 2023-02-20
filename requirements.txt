@@ -13,7 +13,7 @@ seaborn
 SpeechRecognition
 
 gunicorn 
-apache2-utils
+
 
 pydub
 gTTS
