@@ -1,7 +1,7 @@
 mxnet==1.5.0
 setuptools
 gluoncv
-
+streamlit
 numpy
 matplotlib
 itsdangerous
@@ -19,7 +19,7 @@ pydub
 gTTS
 IPython
 transformers
-streamlit
+
 open_clip_torch
 huggingface_hub
 torch
