@@ -1,18 +1,8 @@
 import streamlit as st 
-import mxnet as mx
-from mxnet import image as img 
-from mxnet.gluon.data.vision import transforms
-import gluoncv as gcv
-import hashlib
-from pylab import rcParams
-from matplotlib import pyplot as plt
-from gluoncv import model_zoo, data, utils
 import numpy as np
 import os
 from pathlib import Path
 import re
-import pickle
-import entohi
 import caption
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
@@ -64,24 +54,7 @@ if st.button("Caption the Image"):
   st.markdown(f"## Caption for the Image")
   st.write(text)
   
-  st.markdown(f"## Output text in English:")
-  st.write(text)
-  st.markdown(f"## Your audio in English:")
-  enaudio = entohi.englishspeech(text)
-  print(enaudio)
-  audio_file = open(f"{enaudio}","rb")
-  audio_bytes = audio_file.read()
-  st.audio(audio_bytes,format="audio/mp3/wav", start_time=0)
-  st.markdown(f"## Output text in Hindi")
-  hitext=entohi.convert(text)
-  print(hitext)
-  st.write('{}'.format(hitext))
-  hiaudio=entohi.hindispeech(hitext)
-  print(hiaudio)
-  audio_file = open(f"{hiaudio}", "rb")
-  audio_bytes = audio_file.read()
-  st.markdown(f"## Your audio in Hindi:")
-  st.audio(audio_bytes, format="audio/mp3/wav", start_time=0)
+ 
   
 html_temp = """
    <div class="" style="background-color:purple;" >
