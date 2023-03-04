@@ -1,4 +1,3 @@
-%%writefile app.py
 import streamlit as st 
 import mxnet as mx
 from mxnet import image as img 
