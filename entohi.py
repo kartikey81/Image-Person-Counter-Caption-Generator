@@ -6,20 +6,18 @@ import seaborn as sns
 import string
 import IPython
 from gtts import gTTS
-import streamlit as st
-from transformers import MBartForConditionalGeneration, MBart50TokenizerFast
+from transformers import MarianMTModel, MarianTokenizer
 
-model = MBartForConditionalGeneration.from_pretrained("facebook/mbart-large-50-one-to-many-mmt")
-tokenizer = MBart50TokenizerFast.from_pretrained("facebook/mbart-large-50-one-to-many-mmt", src_lang="en_XX")
+# Load the pre-trained model and tokenizer
+model_name = 'Helsinki-NLP/opus-mt-en-hi'
+tokenizer = MarianTokenizer.from_pretrained(model_name)
+model = MarianMTModel.from_pretrained(model_name)
 
 def convert(article_en):
-  model_inputs = tokenizer(article_en, return_tensors="pt")
-  generated_tokens = model.generate(
-    **model_inputs,
-    forced_bos_token_id=tokenizer.lang_code_to_id["hi_IN"]
-      )
-  translation = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
-  return translation[0]
+  input_ids = tokenizer.encode(article_en, return_tensors="pt")
+  output = model.generate(input_ids)
+  translated_text = tokenizer.decode(output[0], skip_special_tokens=True)
+  return translated_text
 def hindispeech(text):
   language = 'hi' #hindi
   speech = gTTS(text = text, lang = language, slow = False)
