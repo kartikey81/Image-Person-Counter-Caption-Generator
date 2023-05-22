@@ -1,12 +1,27 @@
 setuptools
-streamlit
+gunicorn
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
 numpy
 matplotlib
+wheel
 pathlib
+seaborn
+sounddevice
+soundfile
+audiolazy
+SpeechRecognition
+pydub
+gTTS
+IPython
 transformers
+streamlit
 open_clip_torch
 huggingface_hub
 torch
 torchvision
+opencv-python-headless
 
 
