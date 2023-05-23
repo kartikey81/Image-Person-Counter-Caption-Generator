@@ -78,7 +78,7 @@ def count_persons(predictions, threshold=0.75):
 
 if st.button("COUNT The Persons"):
   #a=counter.count('test.jpg', visualize=True)
-  predictions = detect_objects('test.jpg')
+  predictions = detect_objects(Image.open(file))
   num_people = count_persons(predictions)
   a = count_persons(predictions)
   if a == 1:
